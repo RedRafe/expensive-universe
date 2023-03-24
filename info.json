@@ -1,11 +1,13 @@
 {
   "name": "expensive-universe",
-  "version": "0.1.4",
+  "version": "0.1.0",
   "title": "Expensive Universe",
   "author": "RedRafe",
   "dependencies": [
-    "base >= 1.1.0"
+    "base >= 1.1.0",
+    "? Krastorio2",
+    "? space-exploration >= 0.6"
   ],
-  "description": "Adds expensive mode to Krastorio2 and Space Exploration",
+  "description": "Expensive mode for Krastorio2 and Space Exploration",
   "factorio_version": "1.1"
 }

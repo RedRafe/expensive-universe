@@ -1,6 +1,7 @@
 # Personal
 .vscode/
 scripts/
+logs/
 forum.lua
 changelog_template.txt
 TODO_list.txt
