@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "title": "Expensive Universe",
   "author": "RedRafe",
+  "source": "https://github.com/RedRafe/expensive-universe",
   "dependencies": [
     "base >= 1.1.0",
     "? Krastorio2",
