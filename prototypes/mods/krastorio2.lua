@@ -110,7 +110,7 @@ add("explosives", {name = "sulfur", amount = 1})
 add("explosives", {name = "coal", amount = 1})
 
 add("uranium-processing", {name = "__energy_required__", amount = 9})
-add("uranium-processing", {name = "uranium-ore"}, amount = 8)
+add("uranium-processing", {name = "uranium-ore", amount = 8})
 
 -- -- Fluids
 add("sulfuric-acid", {name = "copper-plate", amount = 1})

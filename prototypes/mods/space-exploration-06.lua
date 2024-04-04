@@ -176,7 +176,7 @@ add("engine-unit", {name = "motor", amount = 2})
 add("iron-gear-wheel", {name = "iron-plate", amount = 2})
 
 add("uranium-processing", {name = "__energy_required__", amount = 9})
-add("uranium-processing", {name = "uranium-ore"}, amount = 8)
+add("uranium-processing", {name = "uranium-ore", amount = 8})
 
 add("low-density-structure", {name = "plastic-bar", amount = 30})
 add("low-density-structure", {name = "copper-plate", amount = 10})
