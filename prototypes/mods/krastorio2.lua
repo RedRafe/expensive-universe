@@ -27,14 +27,16 @@ add("tank", {name = "advanced-circuit", amount = 10})
 add("kr-wind-turbine", {name = "iron-plate", amount = 4})
 add("kr-wind-turbine", {name = "copper-plate", amount = 4})
 
-add("steam-engine", {name = "iron-plate", 40})
+add("steam-engine", {name = "iron-plate", amount = 40})
+add("steam-engine", {name = "iron-gear-wheel", amount = 2})
 
 add("stone-furnace", {name = "stone", amount = 5})
 
 add("burner-mining-drill", {name = "stone-furnace", amount = 1})
 add("burner-mining-drill", {name = "iron-plate", amount = 3})
 
-add("electric-mining-drill", {name = "iron-gear-wheel", amount = 5})
+add("electric-mining-drill", {name = "iron-gear-wheel", amount = 7})
+add("electric-mining-drill", {name = "iron-beam", amount = 6})
 
 add("kr-electric-mining-drill-mk2", {name = "rare-metals", amount = 4})
 
@@ -45,8 +47,15 @@ add("assembling-machine-2", {name = "electronic-circuit", amount = 2})
 add("assembling-machine-2", {name = "iron-gear-wheel", amount = 5})
 
 --  -- Intermediate Products
+add("steel-plate", {name = "__energy_required__", amount = 16})
 add("steel-plate", {name = "coke", amount = 4})
 add("steel-plate", {name = "iron-plate", amount = 10})
+
+add("rare-metals", {name = "__energy_required__", amount = 16})
+add("rare-metals", {name = "raw-rare-metals", amount = 10})
+
+add("rare-metals-2", {name = "__energy_required__", amount = 16})
+add("rare-metals-2", {name = "enriched-rare-metals", amount = 5})
 
 add("lithium-sulfur-battery", {name = "sulfuric-acid", type = "fluid", amount = 10,})
 add("lithium-sulfur-battery", {name = "lithium", amount = 1})
@@ -100,10 +109,15 @@ add("battery", {name = "sulfuric-acid", type = "fluid", amount = 20})
 add("explosives", {name = "sulfur", amount = 1})
 add("explosives", {name = "coal", amount = 1})
 
+add("uranium-processing", {name = "__energy_required__", amount = 9})
+add("uranium-processing", {name = "uranium-ore"}, amount = 8)
+
 -- -- Fluids
 add("sulfuric-acid", {name = "copper-plate", amount = 1})
 
 add("nitric-acid", {name = "mineral-water", type = "fluid", amount = 25})
+
+add("lithium-chloride", {name = "mineral-water", type = "fluid", amount = 50})
 
 -- -- Combat
 add("cannon-shell", {name = "steel-plate", amount = 2})

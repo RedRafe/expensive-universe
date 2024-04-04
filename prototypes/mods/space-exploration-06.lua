@@ -168,11 +168,15 @@ add("processing-unit", {name = "sulfuric-acid", type = "fluid", amount = 5})
 add("advanced-circuit", {name = "plastic-bar", amount = 2})
 add("advanced-circuit", {name = "copper-cable", amount = 4})
 
+add("steel-plate", {name = "__energy_required__", amount = 16})
 add("steel-plate", {name = "iron-plate", amount = 5})
 
 add("engine-unit", {name = "motor", amount = 2})
 
 add("iron-gear-wheel", {name = "iron-plate", amount = 2})
+
+add("uranium-processing", {name = "__energy_required__", amount = 9})
+add("uranium-processing", {name = "uranium-ore"}, amount = 8)
 
 add("low-density-structure", {name = "plastic-bar", amount = 30})
 add("low-density-structure", {name = "copper-plate", amount = 10})

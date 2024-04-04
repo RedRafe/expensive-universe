@@ -20,12 +20,15 @@ local function print_expensive_recipes()
   -- print recipes that actually have expensive mode
   for ___, recipe in pairs(data.raw.recipe) do
     if recipe.normal and recipe.expensive then
-      if is_actually_expensive(recipe) then log(serpent.block(recipe)) end
+      if is_actually_expensive(recipe) then
+        log(serpent.block(recipe))
+      end
     end
   end
 end
 
 --print_expensive_recipes()
+log(serpent.block(EXPR))
 
 for recipe, ingredients in pairs(EXPR) do
   EXPU.clear_expensive_recipe(recipe)

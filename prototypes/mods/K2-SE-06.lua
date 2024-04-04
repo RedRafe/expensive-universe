@@ -53,6 +53,7 @@ remove("iron-gear-wheel")
 add("iron-gear-wheel", {name = "iron-plate", amount = 3})
 
 remove("steel-plate")
+add("steel-plate", {name = "__energy_required__", amount = 16})
 add("steel-plate", {name = "coke", amount = 3})
 add("steel-plate", {name = "iron-plate", amount = 20})
 

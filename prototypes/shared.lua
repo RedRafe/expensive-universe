@@ -54,6 +54,15 @@ local function add_ingredient_to_recipe(recipe, ingredient)
   end
 end
 
+-- add crafting time to target recipe
+-- @ recipe: RecipePrototype
+-- @ ingredient: IngredientPrototype
+local function add_energy_required_to_recipe(recipe, ingredient)
+  if recipe ~= nil and recipe.energy_required ~= nil then
+    recipe.energy_required = recipe.energy_required + ingredient.amount
+  end
+end
+
 -- remove target ingredient from EXPU recipe
 -- @ recipe_name: String
 -- @ ingredient_name: String
@@ -105,16 +114,28 @@ function EXPU.add_ingredient(recipe_name, ingredient)
   if not ingredient.name and type(ingredient.name) ~= "string" then error("EU: ingredient.name expected to be String value") return end
   if not ingredient.amount and type(ingredient.amount) ~= "number" then error("EU: ingredient.amount expected to be Number value") return end
   
-  local ingredient_p = ingredient_prototype(ingredient)
-  local recipe = data.raw.recipe[recipe_name]
-  
-  if not recipe then log("EU: "..recipe_name.." recipe not found.") return end
-  if not data.raw[ingredient_p.type][ingredient_p.name] then log("EU: "..ingredient_p.name.." ingredient not found.") return end
+  local recipe = data.raw.recipe[recipe_name]  
+  if not recipe then
+    log("EU: "..recipe_name.." recipe not found.")
+    return
+  end
 
-  if recipe and data.raw[ingredient_p.type][ingredient_p.name] then
-    add_ingredient_to_recipe(recipe,           ingredient_p)
-    add_ingredient_to_recipe(recipe.normal,    ingredient_p)
-    add_ingredient_to_recipe(recipe.expensive, ingredient_p)
+  if ingredient.name == '__energy_required__' then
+    add_energy_required_to_recipe(recipe,           ingredient)
+    add_energy_required_to_recipe(recipe.normal,    ingredient)
+    add_energy_required_to_recipe(recipe.expensive, ingredient)
+  else
+    local ingredient_p = ingredient_prototype(ingredient)
+    if not data.raw[ingredient_p.type][ingredient_p.name] then
+      log("EU: "..ingredient_p.name.." ingredient not found.")
+      return
+    end
+
+    if recipe and data.raw[ingredient_p.type][ingredient_p.name] then
+      add_ingredient_to_recipe(recipe,           ingredient_p)
+      add_ingredient_to_recipe(recipe.normal,    ingredient_p)
+      add_ingredient_to_recipe(recipe.expensive, ingredient_p)
+    end
   end
 end
 
